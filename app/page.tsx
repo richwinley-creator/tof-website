@@ -1,5 +1,5 @@
 import Hero from '@/components/home/Hero'
-import FeaturedNews from '@/components/home/FeaturedNews'
+import CourseSection from '@/components/home/CourseSection'
 import BlackJacketSection from '@/components/home/BlackJacketSection'
 import Link from 'next/link'
 
@@ -25,7 +25,7 @@ export default function Home() {
         </div>
       </section>
 
-      <FeaturedNews />
+      <CourseSection />
       <BlackJacketSection />
 
       {/* Quick links section */}
