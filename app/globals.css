@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme {
+  --color-masters-green: #006747;
+  --color-masters-gold: #C8A951;
+  --color-masters-dark: #1A1A1A;
+
+  --font-family-serif: Georgia, Cambria, "Times New Roman", serif;
+  --font-family-sans: Inter, system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-family-sans);
+    color: var(--color-masters-dark);
+    background-color: white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-serif);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    background-color: var(--color-masters-green);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: background-color 0.2s;
+  }
+  .btn-primary:hover {
+    opacity: 0.9;
+  }
+
+  .btn-gold {
+    background-color: var(--color-masters-gold);
+    color: var(--color-masters-dark);
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: background-color 0.2s;
+  }
+  .btn-gold:hover {
+    opacity: 0.9;
+  }
+
+  .link-gold {
+    color: var(--color-masters-gold);
+    transition: opacity 0.2s;
+  }
+  .link-gold:hover {
+    opacity: 0.8;
+  }
+
+  .link-green {
+    color: var(--color-masters-green);
+    transition: opacity 0.2s;
+  }
+  .link-green:hover {
+    opacity: 0.8;
+  }
+
+  .card {
+    background-color: white;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    overflow: hidden;
+  }
+
+  .section-green {
+    background-color: var(--color-masters-green);
+    color: white;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .section-white {
+    background-color: white;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .container-main {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-main {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-main {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #006747;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #004d35;
+}
