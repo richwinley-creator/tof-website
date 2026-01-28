@@ -8,10 +8,10 @@ export const metadata: Metadata = {
 
 // This would come from Supabase/database in production
 // Chairman sets this URL in the admin panel
-const golfGeniusUrl = '' // e.g., 'https://www.golfgenius.com/pages/1234567'
+const golfGeniusUrl: string = '' // e.g., 'https://www.golfgenius.com/pages/1234567'
 
 export default function LeaderboardPage() {
-  const hasGolfGenius = golfGeniusUrl && golfGeniusUrl.length > 0
+  const hasGolfGenius = golfGeniusUrl.length > 0
 
   return (
     <>
