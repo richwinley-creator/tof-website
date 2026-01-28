@@ -27,9 +27,9 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <h2 className="text-2xl font-serif font-bold">Tournament of Friends</h2>
-            <p className="text-masters-gold text-sm mt-2">Where friendships are forged on the fairway</p>
+            <p className="text-masters-gold text-sm mt-2">Where brotherhood is forged on the fairway</p>
             <p className="text-gray-300 text-sm mt-4">
-              An annual gathering of golf enthusiasts competing for the prestigious Black Jacket.
+              An annual gathering celebrating Black excellence in golf and competing for the prestigious Black Jacket.
             </p>
           </div>
 

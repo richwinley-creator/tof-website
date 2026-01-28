@@ -5,17 +5,20 @@ export const metadata: Metadata = {
   description: 'Honor roll of all Black Jacket winners throughout Tournament of Friends history.',
 }
 
+// Black Jacket Winners - will be replaced with Supabase data
+// Gerard can update these through the admin panel
 const winners = [
-  { year: 2024, name: 'Champion Name', location: 'Course Name, City, State', score: '-5' },
-  { year: 2023, name: 'Champion Name', location: 'Course Name, City, State', score: '-3' },
-  { year: 2022, name: 'Champion Name', location: 'Course Name, City, State', score: '-4' },
-  { year: 2021, name: 'Champion Name', location: 'Course Name, City, State', score: '-2' },
+  { year: 2025, name: 'TBD', location: 'TBD', score: '-' },
+  { year: 2024, name: 'TBD', location: 'TBD', score: '-' },
+  { year: 2023, name: 'TBD', location: 'TBD', score: '-' },
+  { year: 2022, name: 'TBD', location: 'TBD', score: '-' },
+  { year: 2021, name: 'TBD', location: 'TBD', score: '-' },
   { year: 2020, name: 'Tournament Cancelled', location: 'COVID-19 Pandemic', score: '-' },
-  { year: 2019, name: 'Champion Name', location: 'Course Name, City, State', score: '-6' },
-  { year: 2018, name: 'Champion Name', location: 'Course Name, City, State', score: '-1' },
-  { year: 2017, name: 'Champion Name', location: 'Course Name, City, State', score: '-4' },
-  { year: 2016, name: 'Champion Name', location: 'Course Name, City, State', score: '-3' },
-  { year: 2015, name: 'Champion Name', location: 'Course Name, City, State', score: '-2' },
+  { year: 2019, name: 'TBD', location: 'TBD', score: '-' },
+  { year: 2018, name: 'TBD', location: 'TBD', score: '-' },
+  { year: 2017, name: 'TBD', location: 'TBD', score: '-' },
+  { year: 2016, name: 'TBD', location: 'TBD', score: '-' },
+  { year: 2015, name: 'TBD', location: 'Inaugural Tournament', score: '-' },
 ]
 
 export default function WinnersPage() {
@@ -28,7 +31,7 @@ export default function WinnersPage() {
             Black Jacket Winners
           </h1>
           <p className="text-xl text-gray-200 max-w-2xl mx-auto">
-            The legends who have earned golf&apos;s most prestigious honor among friends
+            The legends who have earned their place in our brotherhood&apos;s history
           </p>
         </div>
       </section>
@@ -111,20 +114,20 @@ export default function WinnersPage() {
         <div className="container-main">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-serif font-bold text-masters-gold">10</div>
-              <div className="text-gray-200 mt-2">Years of Competition</div>
+              <div className="text-4xl font-serif font-bold text-masters-gold">11</div>
+              <div className="text-gray-200 mt-2">Years of Brotherhood</div>
             </div>
             <div>
-              <div className="text-4xl font-serif font-bold text-masters-gold">9</div>
+              <div className="text-4xl font-serif font-bold text-masters-gold">10</div>
               <div className="text-gray-200 mt-2">Tournaments Held</div>
             </div>
             <div>
-              <div className="text-4xl font-serif font-bold text-masters-gold">-6</div>
-              <div className="text-gray-200 mt-2">Best Winning Score</div>
+              <div className="text-4xl font-serif font-bold text-masters-gold">2015</div>
+              <div className="text-gray-200 mt-2">Year Established</div>
             </div>
             <div>
-              <div className="text-4xl font-serif font-bold text-masters-gold">100+</div>
-              <div className="text-gray-200 mt-2">Total Participants</div>
+              <div className="text-4xl font-serif font-bold text-masters-gold">8</div>
+              <div className="text-gray-200 mt-2">Founding Members</div>
             </div>
           </div>
         </div>

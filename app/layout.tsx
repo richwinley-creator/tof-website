@@ -8,8 +8,8 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Tournament of Friends | Home of the Black Jacket',
-  description: 'An annual golf tournament celebrating friendship, competition, and the prestigious Black Jacket tradition.',
-  keywords: 'golf, tournament, black jacket, friends, competition',
+  description: 'An annual golf tournament celebrating Black excellence, brotherhood, and competition for the prestigious Black Jacket.',
+  keywords: 'golf, tournament, black jacket, black golfers, african american golf, brotherhood, competition',
 }
 
 export default function RootLayout({

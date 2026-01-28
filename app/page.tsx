@@ -1,11 +1,30 @@
 import Hero from '@/components/home/Hero'
 import FeaturedNews from '@/components/home/FeaturedNews'
 import BlackJacketSection from '@/components/home/BlackJacketSection'
+import Link from 'next/link'
 
 export default function Home() {
   return (
     <>
       <Hero />
+
+      {/* Tournament Announcement */}
+      <section className="bg-masters-gold py-8">
+        <div className="container-main">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div>
+              <span className="text-masters-dark/70 text-sm uppercase tracking-wider">2026 Tournament</span>
+              <h2 className="text-2xl font-serif font-bold text-masters-dark">
+                Scottsdale, Arizona • September 20-23
+              </h2>
+            </div>
+            <Link href="/register" className="btn-primary whitespace-nowrap">
+              Register Now
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <FeaturedNews />
       <BlackJacketSection />
 

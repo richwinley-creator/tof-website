@@ -2,24 +2,49 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'About | Tournament of Friends',
-  description: 'Learn about the Tournament of Friends, our founders, and the tradition of the Black Jacket.',
+  description: 'Learn about the Tournament of Friends, a celebration of Black excellence in golf, our founders, and the tradition of the Black Jacket.',
 }
 
 const founders = [
   {
-    name: 'Founder 1',
-    role: 'Co-Founder',
-    bio: 'A passionate golfer and visionary who helped establish the Tournament of Friends.',
+    name: 'Gerard Gibbons',
+    role: 'Commissioner & Founder',
+    bio: 'The visionary leader who built Tournament of Friends into a premier celebration of Black excellence in golf.',
   },
   {
-    name: 'Founder 2',
-    role: 'Co-Founder',
-    bio: 'Instrumental in creating the traditions and camaraderie that define our tournament.',
+    name: 'Kevin Arnold',
+    role: 'Founder',
+    bio: 'Dedicated to building brotherhood and community through the game we love.',
   },
   {
-    name: 'Founder 3',
-    role: 'Co-Founder',
-    bio: 'The driving force behind making the Tournament of Friends a premier annual event.',
+    name: 'Len Burnett',
+    role: 'Founder',
+    bio: 'Committed to growing Black excellence in golf and creating lasting bonds.',
+  },
+  {
+    name: 'Keith Clinkscales',
+    role: 'Founder',
+    bio: 'Passionate about bringing Black golfers together for championship competition.',
+  },
+  {
+    name: 'Ryan Myers',
+    role: 'Founder',
+    bio: 'Helping create unforgettable experiences on and off the course.',
+  },
+  {
+    name: 'Toby Purdy',
+    role: 'Founder',
+    bio: 'Building the traditions that make Tournament of Friends special.',
+  },
+  {
+    name: 'Tony Stovall',
+    role: 'Founder',
+    bio: 'Fostering camaraderie and competition among the brotherhood.',
+  },
+  {
+    name: 'Darrell Thompson',
+    role: 'Founder',
+    bio: 'Championing Black golfers and the spirit of the game.',
   },
 ]
 
@@ -33,7 +58,7 @@ export default function AboutPage() {
             About Tournament of Friends
           </h1>
           <p className="text-xl text-gray-200 max-w-2xl mx-auto">
-            A tradition of friendship, competition, and the pursuit of the Black Jacket
+            A tradition of brotherhood, Black excellence, and the pursuit of the Black Jacket
           </p>
         </div>
       </section>
@@ -47,13 +72,13 @@ export default function AboutPage() {
             </h2>
             <div className="prose prose-lg text-gray-600">
               <p className="mb-6">
-                The Tournament of Friends began in 2015 as a simple gathering of golf enthusiasts who shared a love for the game and a deep appreciation for the friendships it fosters. What started as an informal competition among friends has grown into an annual tradition that participants look forward to all year.
+                The Tournament of Friends began in 2015 as a gathering of Black golf enthusiasts who shared a love for the game and a vision: to create a space where Black men could compete, connect, and celebrate excellence on the fairway. What started as an informal competition among friends has grown into an annual tradition that participants look forward to all year.
               </p>
               <p className="mb-6">
-                Inspired by golf&apos;s most prestigious tournaments, we created our own symbol of excellence: the Black Jacket. This coveted prize represents not just golfing prowess, but the values of sportsmanship, camaraderie, and the bonds that make this tournament special.
+                Inspired by golf&apos;s most prestigious tournaments, we created our own symbol of excellence: the Black Jacket. This coveted prize represents not just golfing prowess, but the values of brotherhood, sportsmanship, and the bonds that make our community special.
               </p>
               <p>
-                Each year, competitors gather at a carefully selected course to test their skills, share laughs, and compete for the honor of donning the Black Jacket. The tournament has become more than just a golf competition—it&apos;s a celebration of friendship and the enduring spirit of the game.
+                Each year, Black golfers from across the country gather at a carefully selected course to test their skills, build lasting relationships, and compete for the honor of donning the Black Jacket. The tournament has become more than just a golf competition—it&apos;s a celebration of Black excellence and the enduring spirit of the game.
               </p>
             </div>
           </div>
@@ -68,11 +93,11 @@ export default function AboutPage() {
               The Black Jacket Tradition
             </h2>
             <p className="text-gray-200 text-lg mb-8">
-              The Black Jacket is more than a prize—it&apos;s a symbol of excellence earned through skill, determination, and the respect of one&apos;s peers. Each year, the reigning champion has the honor of presenting the jacket to the new winner, passing on the legacy of achievement that defines our tournament.
+              The Black Jacket is more than a prize—it&apos;s a symbol of excellence earned through skill, determination, and the respect of your brothers. Each year, the reigning champion has the honor of presenting the jacket to the new winner, passing on a legacy that celebrates Black excellence in golf.
             </p>
             <div className="bg-white/10 p-8 rounded-lg">
               <blockquote className="text-xl italic text-masters-gold">
-                &quot;Winning the Black Jacket is about more than the score—it&apos;s about earning the respect of your friends and becoming part of a tradition that celebrates the best in all of us.&quot;
+                &quot;Winning the Black Jacket is about more than the score—it&apos;s about earning the respect of your brothers and becoming part of a tradition that celebrates Black excellence on the course.&quot;
               </blockquote>
             </div>
           </div>
@@ -85,7 +110,7 @@ export default function AboutPage() {
           <h2 className="text-3xl font-serif font-bold text-masters-dark mb-12 text-center">
             The Founders
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             {founders.map((founder) => (
               <div key={founder.name} className="text-center">
                 {/* Photo placeholder */}
@@ -130,7 +155,7 @@ export default function AboutPage() {
                   Eligibility
                 </h3>
                 <p className="text-gray-600">
-                  Open to members of the Tournament of Friends community with valid GHIN handicaps.
+                  Open to members of the Tournament of Friends brotherhood with valid GHIN handicaps.
                 </p>
               </div>
               <div className="bg-white p-6 shadow-lg">

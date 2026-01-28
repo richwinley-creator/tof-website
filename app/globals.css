@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-masters-green: #006747;
+  --color-masters-green: #1A1A1A;
   --color-masters-gold: #C8A951;
   --color-masters-dark: #1A1A1A;
 
@@ -116,10 +116,10 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #006747;
+  background: #1A1A1A;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #004d35;
+  background: #333333;
 }

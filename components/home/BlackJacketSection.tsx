@@ -21,10 +21,10 @@ export default function BlackJacketSection() {
               The <span className="text-masters-gold">Black Jacket</span> Tradition
             </h2>
             <p className="text-gray-200 mb-6 text-lg">
-              Inspired by golf&apos;s most prestigious tradition, the Tournament of Friends awards the winner with the coveted Black Jacket, symbolizing excellence, sportsmanship, and the bonds of friendship that define our tournament.
+              Inspired by golf&apos;s most prestigious tradition, the Tournament of Friends awards the winner with the coveted Black Jacket, symbolizing Black excellence, sportsmanship, and the bonds of brotherhood that define our tournament.
             </p>
             <p className="text-gray-200 mb-8">
-              Each year, the reigning champion has the honor of presenting the jacket to the new winner in a ceremony that celebrates not just victory, but the camaraderie that makes this tournament special.
+              Each year, the reigning champion has the honor of presenting the jacket to the new winner in a ceremony that celebrates not just victory, but the community and brotherhood that makes this tournament special.
             </p>
             <Link
               href="/winners"

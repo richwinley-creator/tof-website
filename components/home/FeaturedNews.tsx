@@ -4,7 +4,7 @@ const featuredNews = [
   {
     id: 1,
     title: '2024 Tournament Recap: A Historic Finish',
-    excerpt: 'The 2024 Tournament of Friends delivered unforgettable moments as competitors battled for the coveted Black Jacket.',
+    excerpt: 'The 2024 Tournament of Friends delivered unforgettable moments as our brothers battled for the coveted Black Jacket.',
     date: 'October 15, 2024',
     slug: '2024-tournament-recap',
     image: '/images/placeholder-golf.jpg',
@@ -12,7 +12,7 @@ const featuredNews = [
   {
     id: 2,
     title: '2025 Registration Now Open',
-    excerpt: 'Secure your spot in the 10th annual Tournament of Friends. Limited spots available for this milestone event.',
+    excerpt: 'Secure your spot in the 10th annual Tournament of Friends. Limited spots available for this milestone celebration.',
     date: 'January 1, 2025',
     slug: '2025-registration-open',
     image: '/images/placeholder-golf.jpg',
@@ -20,7 +20,7 @@ const featuredNews = [
   {
     id: 3,
     title: 'Black Jacket Ceremony Tradition',
-    excerpt: 'Learn about the prestigious Black Jacket ceremony and what it means to earn this honor among friends.',
+    excerpt: 'Learn about the prestigious Black Jacket ceremony and what it means to earn this honor among the brotherhood.',
     date: 'December 10, 2024',
     slug: 'black-jacket-tradition',
     image: '/images/placeholder-golf.jpg',

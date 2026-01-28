@@ -14,7 +14,7 @@ export default function Hero() {
         <div className="max-w-3xl mx-auto text-center">
           <div className="mb-6">
             <span className="inline-block bg-masters-gold text-masters-dark px-4 py-1 text-sm font-semibold uppercase tracking-wider">
-              2025 Tournament
+              2026 Tournament • Scottsdale, AZ
             </span>
           </div>
 
@@ -23,7 +23,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-200 mb-8 font-light">
-            Join us for the 10th annual Tournament of Friends. Where legends are made and friendships are forged on the fairway.
+            Join us for Tournament of Friends 2026. Where Black excellence is celebrated and brotherhood is forged on the fairway.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -34,26 +34,26 @@ export default function Hero() {
               Register Now
             </Link>
             <Link
-              href="/leaderboard"
+              href="/schedule"
               className="bg-transparent border-2 border-white text-white px-6 py-3 font-semibold hover:bg-white hover:text-masters-green transition-colors duration-200 text-center"
             >
-              View Leaderboard
+              View Schedule
             </Link>
           </div>
 
           {/* Tournament info */}
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-masters-gold text-4xl font-serif font-bold">TBD</div>
+              <div className="text-masters-gold text-4xl font-serif font-bold">Sept 20-23</div>
               <div className="text-gray-300 mt-2">Tournament Dates</div>
             </div>
             <div className="text-center">
-              <div className="text-masters-gold text-4xl font-serif font-bold">TBD</div>
-              <div className="text-gray-300 mt-2">Location</div>
+              <div className="text-masters-gold text-4xl font-serif font-bold">Scottsdale</div>
+              <div className="text-gray-300 mt-2">Arizona</div>
             </div>
             <div className="text-center">
-              <div className="text-masters-gold text-4xl font-serif font-bold">24</div>
-              <div className="text-gray-300 mt-2">Competitors</div>
+              <div className="text-masters-gold text-4xl font-serif font-bold">3 Courses</div>
+              <div className="text-gray-300 mt-2">Championship Golf</div>
             </div>
           </div>
         </div>

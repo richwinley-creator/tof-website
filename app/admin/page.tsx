@@ -1,167 +1,118 @@
-'use client'
-
-import { useState } from 'react'
 import Link from 'next/link'
 
-// Admin dashboard - protected route (will add auth later)
 export default function AdminDashboard() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false)
-
-  // Stats placeholder
-  const stats = {
-    totalMembers: 45,
-    registeredFor2025: 18,
-    pendingPayments: 3,
-    publishedArticles: 12,
-  }
-
-  if (!isAuthenticated) {
-    return (
-      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-        <div className="bg-white p-8 shadow-lg rounded-lg max-w-md w-full">
-          <h1 className="text-2xl font-serif font-bold text-masters-dark mb-6 text-center">
-            Admin Login
-          </h1>
-          <form
-            onSubmit={(e) => {
-              e.preventDefault()
-              setIsAuthenticated(true)
-            }}
-            className="space-y-4"
-          >
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Email
-              </label>
-              <input
-                type="email"
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-masters-green"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Password
-              </label>
-              <input
-                type="password"
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-masters-green"
-              />
-            </div>
-            <button type="submit" className="w-full btn-primary">
-              Sign In
-            </button>
-          </form>
-        </div>
-      </div>
-    )
-  }
+  const adminSections = [
+    {
+      title: 'Leaderboard',
+      description: 'Connect Golf Genius for live scores',
+      href: '/admin/leaderboard',
+      color: 'bg-green-600',
+      icon: (
+        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+        </svg>
+      ),
+    },
+    {
+      title: 'Members',
+      description: 'Manage the brotherhood',
+      href: '/admin/members',
+      color: 'bg-blue-600',
+      icon: (
+        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
+      ),
+    },
+    {
+      title: 'Winners',
+      description: 'Black Jacket history',
+      href: '/admin/winners',
+      color: 'bg-yellow-600',
+      icon: (
+        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+        </svg>
+      ),
+    },
+    {
+      title: 'News',
+      description: 'Post announcements',
+      href: '/admin/news',
+      color: 'bg-purple-600',
+      icon: (
+        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+        </svg>
+      ),
+    },
+    {
+      title: 'Gallery',
+      description: 'Upload photos',
+      href: '/admin/gallery',
+      color: 'bg-pink-600',
+      icon: (
+        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+      ),
+    },
+    {
+      title: 'Settings',
+      description: 'Tournament details',
+      href: '/admin/tournament',
+      color: 'bg-gray-600',
+      icon: (
+        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+      ),
+    },
+  ]
 
   return (
     <div className="min-h-screen bg-gray-100">
-      {/* Admin Header */}
+      {/* Simple Header */}
       <header className="bg-masters-dark text-white">
-        <div className="container-main py-4">
-          <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-xl font-serif font-bold">TOF Admin</h1>
-            </div>
-            <div className="flex items-center gap-4">
-              <Link href="/" className="text-gray-300 hover:text-white text-sm">
-                View Site →
-              </Link>
-              <button
-                onClick={() => setIsAuthenticated(false)}
-                className="text-gray-300 hover:text-white text-sm"
-              >
-                Sign Out
-              </button>
-            </div>
-          </div>
+        <div className="px-4 py-6">
+          <h1 className="text-2xl font-bold text-center">Chairman Dashboard</h1>
+          <p className="text-center text-gray-300 mt-1">Tournament of Friends</p>
         </div>
       </header>
 
-      <div className="container-main py-8">
-        {/* Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-          <div className="bg-white p-6 shadow rounded-lg">
-            <div className="text-3xl font-bold text-masters-green">{stats.totalMembers}</div>
-            <div className="text-gray-600 text-sm">Total Members</div>
-          </div>
-          <div className="bg-white p-6 shadow rounded-lg">
-            <div className="text-3xl font-bold text-masters-green">{stats.registeredFor2025}</div>
-            <div className="text-gray-600 text-sm">2025 Registrations</div>
-          </div>
-          <div className="bg-white p-6 shadow rounded-lg">
-            <div className="text-3xl font-bold text-masters-gold">{stats.pendingPayments}</div>
-            <div className="text-gray-600 text-sm">Pending Payments</div>
-          </div>
-          <div className="bg-white p-6 shadow rounded-lg">
-            <div className="text-3xl font-bold text-masters-green">{stats.publishedArticles}</div>
-            <div className="text-gray-600 text-sm">Published Articles</div>
-          </div>
+      <div className="px-4 py-6 max-w-2xl mx-auto">
+        {/* Welcome Banner */}
+        <div className="bg-masters-green text-white p-6 rounded-2xl mb-6 text-center">
+          <p className="text-xl font-bold">Welcome, Gerard</p>
+          <p className="text-green-200 mt-1">TOF 2026 Scottsdale</p>
         </div>
 
-        {/* Quick Actions */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <Link
-            href="/admin/scores"
-            className="bg-masters-green text-white p-6 rounded-lg hover:bg-opacity-90 transition-colors"
-          >
-            <h2 className="text-xl font-serif font-bold mb-2">Score Entry</h2>
-            <p className="text-gray-200 text-sm">Enter and manage tournament scores</p>
-          </Link>
-          <Link
-            href="/admin/news"
-            className="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow"
-          >
-            <h2 className="text-xl font-serif font-bold text-masters-dark mb-2">Manage News</h2>
-            <p className="text-gray-600 text-sm">Create and edit news articles</p>
-          </Link>
-          <Link
-            href="/admin/members"
-            className="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow"
-          >
-            <h2 className="text-xl font-serif font-bold text-masters-dark mb-2">Members</h2>
-            <p className="text-gray-600 text-sm">View and manage member accounts</p>
-          </Link>
+        {/* Big, Easy Buttons */}
+        <div className="grid grid-cols-2 gap-4">
+          {adminSections.map((section) => (
+            <Link
+              key={section.title}
+              href={section.href}
+              className={`${section.color} text-white p-6 rounded-2xl flex flex-col items-center justify-center text-center min-h-[140px] active:scale-95 transition-transform shadow-lg`}
+            >
+              <div className="mb-3">
+                {section.icon}
+              </div>
+              <span className="text-xl font-bold">{section.title}</span>
+              <span className="text-sm opacity-80 mt-1">{section.description}</span>
+            </Link>
+          ))}
         </div>
 
-        {/* Recent Activity */}
-        <div className="bg-white p-6 shadow rounded-lg">
-          <h2 className="text-xl font-serif font-bold text-masters-dark mb-4">
-            Recent Activity
-          </h2>
-          <div className="space-y-4">
-            <div className="flex items-center justify-between py-3 border-b">
-              <div>
-                <p className="font-medium">New registration: John Smith</p>
-                <p className="text-sm text-gray-500">2 hours ago</p>
-              </div>
-              <span className="bg-masters-green/10 text-masters-green px-2 py-1 rounded text-sm">
-                Registration
-              </span>
-            </div>
-            <div className="flex items-center justify-between py-3 border-b">
-              <div>
-                <p className="font-medium">Payment received: Mike Johnson</p>
-                <p className="text-sm text-gray-500">5 hours ago</p>
-              </div>
-              <span className="bg-masters-gold/10 text-masters-gold px-2 py-1 rounded text-sm">
-                Payment
-              </span>
-            </div>
-            <div className="flex items-center justify-between py-3">
-              <div>
-                <p className="font-medium">News article published</p>
-                <p className="text-sm text-gray-500">1 day ago</p>
-              </div>
-              <span className="bg-blue-100 text-blue-600 px-2 py-1 rounded text-sm">
-                Content
-              </span>
-            </div>
-          </div>
+        {/* View Site Link */}
+        <div className="mt-8 text-center">
+          <Link
+            href="/"
+            className="inline-block bg-white text-masters-dark px-8 py-4 rounded-xl font-bold text-lg shadow-md"
+          >
+            View Website →
+          </Link>
         </div>
       </div>
     </div>

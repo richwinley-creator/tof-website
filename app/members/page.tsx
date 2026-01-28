@@ -166,7 +166,7 @@ export default function MembersDashboard() {
                 <div className="flex items-start justify-between">
                   <div>
                     <h3 className="font-serif font-bold text-masters-dark text-lg">
-                      2025 Tournament
+                      TOF 2026 Scottsdale
                     </h3>
                     <p className="text-gray-600 mt-1">
                       You are registered for the upcoming tournament
@@ -180,11 +180,11 @@ export default function MembersDashboard() {
                   <div className="grid grid-cols-3 gap-4 text-center">
                     <div>
                       <span className="text-sm text-gray-500">Dates</span>
-                      <p className="font-medium">TBD</p>
+                      <p className="font-medium">Sep 20-23</p>
                     </div>
                     <div>
                       <span className="text-sm text-gray-500">Location</span>
-                      <p className="font-medium">TBD</p>
+                      <p className="font-medium">Scottsdale, AZ</p>
                     </div>
                     <div>
                       <span className="text-sm text-gray-500">Payment</span>
@@ -230,20 +230,27 @@ export default function MembersDashboard() {
               </div>
 
               {/* Quick Links */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <Link
-                  href="/leaderboard"
+                  href="/members/directory"
                   className="bg-masters-green text-white p-6 rounded-lg hover:bg-opacity-90 transition-colors"
                 >
-                  <h3 className="font-serif font-bold text-lg mb-2">View Leaderboard</h3>
-                  <p className="text-gray-200 text-sm">Check current tournament standings</p>
+                  <h3 className="font-serif font-bold text-lg mb-2">The Brotherhood</h3>
+                  <p className="text-gray-200 text-sm">View member directory</p>
                 </Link>
                 <Link
-                  href="/gallery"
+                  href="/schedule"
+                  className="bg-masters-gold text-masters-dark p-6 rounded-lg hover:bg-opacity-90 transition-colors"
+                >
+                  <h3 className="font-serif font-bold text-lg mb-2">Tournament Schedule</h3>
+                  <p className="text-masters-dark/70 text-sm">View pairings and itinerary</p>
+                </Link>
+                <Link
+                  href="/leaderboard"
                   className="bg-gray-100 text-masters-dark p-6 rounded-lg hover:bg-gray-200 transition-colors"
                 >
-                  <h3 className="font-serif font-bold text-lg mb-2">Photo Gallery</h3>
-                  <p className="text-gray-600 text-sm">Browse tournament memories</p>
+                  <h3 className="font-serif font-bold text-lg mb-2">Leaderboard</h3>
+                  <p className="text-gray-600 text-sm">Check tournament standings</p>
                 </Link>
               </div>
             </div>

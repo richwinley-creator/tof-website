@@ -1,60 +1,67 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'News | Tournament of Friends',
   description: 'Latest news and updates from the Tournament of Friends.',
 }
 
-// Sample news data - will be replaced with Supabase data
+// News articles - will be replaced with Supabase data
 const newsArticles = [
   {
     id: 1,
-    title: '2025 Tournament Registration Now Open',
-    excerpt: 'Secure your spot in the 10th annual Tournament of Friends. This milestone event promises to be our best yet.',
-    date: 'January 15, 2025',
-    slug: '2025-registration-open',
+    title: 'TOF 2026 Registration Now Open',
+    excerpt: 'The wait is over! Registration is officially open for TOF 2026 in Scottsdale, Arizona. Mark your calendars for September 20-23, 2026 and secure your spot in what promises to be our best tournament yet.',
+    date: 'January 28, 2026',
+    slug: 'tof-2026-registration-open',
     category: 'Announcement',
+    image: '/images/courses/camelback.jpg',
   },
   {
     id: 2,
-    title: '2024 Tournament Recap: A Historic Finish',
-    excerpt: 'The 2024 Tournament of Friends delivered unforgettable moments as competitors battled for the coveted Black Jacket.',
-    date: 'October 20, 2024',
-    slug: '2024-tournament-recap',
-    category: 'Recap',
+    title: 'Course Preview: Wildfire Golf Club',
+    excerpt: 'Our practice round destination features the Arnold Palmer designed Palmer Course. Set against the stunning McDowell Mountains, Wildfire offers desert golf at its finest with wide fairways and strategic bunkering.',
+    date: 'January 25, 2026',
+    slug: 'wildfire-course-preview',
+    category: 'Course Preview',
+    image: '/images/courses/wildfire.jpg',
   },
   {
     id: 3,
-    title: 'The Black Jacket Tradition: A Decade of Excellence',
-    excerpt: 'As we approach our 10th anniversary, we look back at the tradition that defines Tournament of Friends.',
-    date: 'December 1, 2024',
-    slug: 'black-jacket-decade',
-    category: 'Feature',
+    title: 'Course Preview: Grayhawk Golf Club',
+    excerpt: 'The Raptor Course at Grayhawk will host Rounds 1 & 2. This Tom Fazio masterpiece has welcomed PGA Tour events and offers championship conditions that will test every aspect of your game.',
+    date: 'January 22, 2026',
+    slug: 'grayhawk-course-preview',
+    category: 'Course Preview',
+    image: '/images/courses/grayhawk.jpg',
   },
   {
     id: 4,
-    title: 'Meet the 2024 Champion',
-    excerpt: 'An exclusive interview with our newest Black Jacket winner about their journey to victory.',
-    date: 'October 25, 2024',
-    slug: 'meet-2024-champion',
-    category: 'Interview',
+    title: 'Course Preview: Camelback Golf Club',
+    excerpt: 'The Padre Course at Camelback will host our final round where the Black Jacket will be decided. Set in Paradise Valley with Camelback Mountain as the backdrop, this is where champions are crowned.',
+    date: 'January 20, 2026',
+    slug: 'camelback-course-preview',
+    category: 'Course Preview',
+    image: '/images/courses/camelback.jpg',
   },
   {
     id: 5,
-    title: '2025 Course Announcement Coming Soon',
-    excerpt: 'We are thrilled to announce that the venue for our 10th anniversary tournament will be revealed next month.',
-    date: 'January 5, 2025',
-    slug: '2025-course-teaser',
-    category: 'Announcement',
+    title: 'The Black Jacket Legacy: 11 Years Strong',
+    excerpt: 'In 2015, eight friends came together with a vision: create a tournament that celebrates Black excellence in golf. What started as a friendly competition has grown into a brotherhood that spans the country.',
+    date: 'January 15, 2026',
+    slug: 'black-jacket-legacy',
+    category: 'Feature',
+    image: null,
   },
   {
     id: 6,
-    title: 'Tips from Past Champions',
-    excerpt: 'Former Black Jacket winners share their advice for competing in the Tournament of Friends.',
-    date: 'November 15, 2024',
-    slug: 'champion-tips',
-    category: 'Feature',
+    title: 'What to Pack for Scottsdale',
+    excerpt: 'September in the Sonoran Desert means warm days and perfect golf weather. Here is everything you need to know about preparing for TOF 2026, from gear to attire to sun protection.',
+    date: 'January 10, 2026',
+    slug: 'what-to-pack-scottsdale',
+    category: 'Guide',
+    image: null,
   },
 ]
 
@@ -104,11 +111,20 @@ export default function NewsPage() {
                 href={`/news/${article.slug}`}
                 className="card group"
               >
-                {/* Image placeholder */}
-                <div className="h-48 bg-masters-green/10 flex items-center justify-center">
-                  <svg className="w-16 h-16 text-masters-green/30" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                  </svg>
+                {/* Article Image */}
+                <div className="h-48 bg-masters-dark relative overflow-hidden">
+                  {article.image ? (
+                    <Image
+                      src={article.image}
+                      alt={article.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-gradient-to-br from-masters-dark to-masters-green flex items-center justify-center">
+                      <span className="text-masters-gold font-serif text-4xl font-bold">TOF</span>
+                    </div>
+                  )}
                 </div>
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-3">
